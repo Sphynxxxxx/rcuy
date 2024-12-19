@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+  min-height: 100vh;
+}
+
+h1, .category-section h2 {
+  color: #ff4500;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.category-section {
+  background: transparent;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.category-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* Post Container */
+.post-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  display: grid;
+  gap: 40px;
+}
+
+/* Card Design */
+.post {
+  background: #2a2a2a;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.post h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff4500;
+  padding-bottom: 10px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Comments Section */
+.post form {
+  background: #333;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.post input[type="text"], 
+.post textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease;
+}
+
+.post input[type="text"]:focus,
+.post textarea:focus {
+  border-color: #ff4500;
+  outline: none;
+}
+
+/* Buttons */
+.post button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.post button:hover {
+  background-color: #ff5722;
+}
+
+/* Comments Display */
+.post p {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.post p strong {
+  color: #ff4500;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ff4500, transparent);
+  margin: 25px 0;
+}
+
+/* Like Section */
+.like-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .post-container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .post {
+    padding: 20px;
+  }
+
+  .category-section h2 {
+    font-size: 1.5em;
+  }
+
+  .post h3 {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .category-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  .post {
+    margin-bottom: 0;
+  }
+}
